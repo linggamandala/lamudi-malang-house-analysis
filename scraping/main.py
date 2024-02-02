@@ -51,10 +51,11 @@ for page in range(1, 100):
                     status = content.find('span', 'not-verified').text.strip()
                 except AttributeError:
                     continue
-        try:
-            description = content.find('div', 'ListingCell-shortDescription').text.strip()
-        except:
-            continue
+        # mengambil deskripsi untuk dijadikan wordcloud
+        # try:
+        #     description = content.find('div', 'ListingCell-shortDescription').text.strip()
+        # except:
+        #     continue
     
         final_data = {
             'title': title,
@@ -62,8 +63,8 @@ for page in range(1, 100):
             'detail': detail,
             'price': price,
             'agent_name': agent,
-            'agent_status': status,
-            'description': description   
+            'agent_status': status
+            # 'description': description   
         }
         result.append(final_data)
 
@@ -74,7 +75,7 @@ for page in range(1, 100):
 csv_filename = 'lamudi_malang_house.csv'
 
 with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
-    fieldnames = ['title', 'location', 'detail', 'price', 'agent_name', 'agent_status', 'description']
+    fieldnames = ['title', 'location', 'detail', 'price', 'agent_name', 'agent_status']
     csv_writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     csv_writer.writeheader()
     for data in result:
