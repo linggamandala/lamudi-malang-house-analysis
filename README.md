@@ -3,7 +3,7 @@ Lamudi house price prediction for DQLab Capstone Project
 
 ## Setup environment
 ```
-conda create -n dqlab python=3.11.4
+conda create -n dqlab python=3.11.5
 conda activate dqlab
 pip install -r requirements.txt
 ```
