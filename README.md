@@ -1,5 +1,5 @@
-# lamudi-house-price-prediction
-Lamudi house price prediction for DQLab Capstone Project
+# lamudi-malang-house-analysis
+Lamudi Indonesia Malang House Price Analysis for DQLab Capstone Project
 
 ## Setup environment
 ```
